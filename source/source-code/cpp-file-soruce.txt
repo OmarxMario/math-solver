@@ -1,0 +1,842 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+//decalre scopes
+void show_main_menu();
+void algebra();
+void liner_function();
+void quadiratical_function();
+void coming_soon();
+void arthitical_opration();
+void quadiratical_formlia();
+void geymeter();
+void a2d();
+void a3d();
+void p2d();
+void p3d();
+void trigometer();
+
+float pi=3.14159;
+//runaple function
+
+int main(){
+    system("title math");
+    show_main_menu();
+    return 0;
+
+
+    
+}
+
+//main-menu
+void show_main_menu(){
+    system("cls");
+    system("color 0f");
+    int a;
+    do
+    {
+        cout<<"0) Algebra \n1) Geymeter \n2) Trigometer \n3) Calclus\n\n";
+        cin>>a;
+       
+    } while (a<0 || a>3);
+    switch (a)
+    {
+    case 0:
+        algebra();break;
+    case 1:
+        geymeter();break;
+    case 2:
+         trigometer();break;
+    case 3:
+        coming_soon();
+        break;
+    
+    default:
+        break;
+    }
+    
+}
+
+void quad_f(){
+    double x;
+    system("cls");
+    system("color 0a");
+    double a;
+    double b;
+    double c;
+    cout<<"enter at this secuencys ax^2+bx+c";
+    cout<<endl<<"a: ";
+    cin>>a;
+    cout<<endl<<"b: ";
+    cin>>b;
+    cout<<endl<<"c: ";
+    cin>>c;
+    cout<<"now the value of x: ";
+    cin>>x;
+    system("cls");
+    system("color 0b");
+    cout<<endl<<"\nAnser is f("<<x<<") = "<<a*(x*x)+(b*x)+c<<" \n";
+    system("pause");
+    show_main_menu();
+
+}
+void liner(){
+    system("cls");
+    system("color 0c");
+    double a;
+    double b;
+    double x;
+
+    cout<<"enter at this secuencys ax+b";
+    cout<<endl<<"a: ";
+    cin>>a;
+    cout<<endl<<"b: ";
+    cin>>b;
+    system("cls");
+    system("color 0b");
+    cout<<"now enter the value of x "<<endl;
+    cout<<"x: ";
+    cin>>x;
+
+
+    cout<<"the f("<<x<<")= "<<(a*(x)+(b))<<endl<<endl<<endl;
+
+    
+    system("pause");
+    show_main_menu();
+
+
+
+}
+
+
+
+
+
+//sub-menu
+void algebra(){
+    system("cls");
+    system("color 0a");
+    int a;
+    do
+    {
+        cout<<"0) Arthimatical-Opration \n1) Quadrialic function Table \n2) liner-function Table \n3) quadrilic formila \n4) quadrilic function\n5) liner function\n\n";
+        cin>>a;
+       
+    } while (a<0 || a>5);
+    switch (a)
+    {
+    case 0:
+        arthitical_opration();break;
+    case 1:
+        quadiratical_function();break;
+    case 2:
+        liner_function();break;
+    case 3:
+        quadiratical_formlia();break;
+    case 4:
+        quad_f();break;
+    case 5:
+        liner();break;
+
+    default:
+        break;
+    }
+
+
+}
+void geymeter(){
+    system("cls");
+    system("color 0b");
+    int a;
+    do
+    {
+        cout<<"0) Calc Area of 2d shapes \n1) Calc Area of 3d shapes \n2) Calc peremiter of 2d shapes \n3) Calc permeter of 3d shapes\n\n";
+        cin>>a;
+       
+    } while (a<0 || a>3);
+    switch (a)
+    {
+    case 0:
+        a2d();break;
+    case 1:
+        a3d();break;
+    case 2:
+        p2d();break;
+    case 3:
+        p3d();break;
+    
+    default:
+        break;
+    }
+
+
+}
+void circ2d(){
+    system("cls");
+    system("color 0b");
+    double r;
+    cout<<"enter radius :";
+    cin>>r;
+    cout<<endl<<"anser is "<<pi*(r*r)<<"cm^2"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void sqr2d(){
+    system("cls");
+    system("color 0b");
+    double s;
+    cout<<"enter side len :";
+    cin>>s;
+    cout<<endl<<"anser is "<<(s*s)<<"cm^2"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void rect2d(){
+    system("cls");
+    system("color 0b");
+    double w;
+    double h;
+    
+    cout<<"enter width len :";
+    cin>>w;
+    cout<<"enter height len :";
+    cin>>h;
+    cout<<endl<<"anser is "<<(w*h)<<"cm^2"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void tri(){
+    system("cls");
+    system("color 0b");
+    double b;
+    double h;
+    
+    cout<<"enter the base :";
+    cin>>b;
+    cout<<"enter the height :";
+    cin>>h;
+    cout<<endl<<"anser is "<<0.5*(b*h)<<"cm^2"<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+
+
+void a2d(){
+    system("cls");
+    system("color 0b");
+    int a;
+    do
+    {
+        cout<<"0) Calc Circle Area \n1) Calc Square \n2) Calc Rectangle \n3) Calc Tirangle\n\n";
+        cin>>a;
+       
+    } while (a<0 || a>3);
+    switch (a)
+    {
+    case 0:
+        circ2d();
+        break;
+    case 1:
+        sqr2d();break;
+    case 2:
+        rect2d();break;
+    case 3:
+        tri();break;
+    
+    default:
+        break;
+    }
+
+
+}
+
+
+void sphere(){
+    system("cls");
+    system("color 0b");
+    double r;
+    cout<<"enter radius :";
+    cin>>r;
+    cout<<endl<<"anser is "<<(4.0/3.0)*pi*(r*r*r)<<"cm^3"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void cube(){
+    system("cls");
+    system("color 0b");
+    double s;
+    cout<<"enter side len :";
+    cin>>s;
+    cout<<endl<<"anser is "<<(s*s*s)<<"cm^3"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void cubiod(){
+    system("cls");
+    system("color 0b");
+    double w;
+    double h;
+    double l;
+    
+    cout<<"enter width:";
+    cin>>w;
+    cout<<"enter lenth:";
+    cin>>l;
+    cout<<"enter height:";
+    cin>>h;
+    cout<<endl<<"anser is "<<w*l*h<<"cm^3"<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+
+void a3d(){
+    system("cls");
+    system("color 0b");
+    int a;
+    do
+    {
+        cout<<"0) Calc Sphere Voluum \n1) Calc Cube VOulmum \n2) Calc cubiod \n\n";
+        cin>>a;
+       
+    } while (a<0 || a>2);
+    switch (a)
+    {
+    case 0:
+        sphere();
+        break;
+    case 1:
+        cube();break;
+    case 2:
+        cubiod();break;
+
+    
+    default:
+        break;
+    }
+
+
+}
+
+void circp(){
+    system("cls");
+    system("color 0b");
+    double r;
+    cout<<"enter radius :";
+    cin>>r;
+    cout<<endl<<"anser is "<<2*pi*r<<"cm"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void srqp(){
+    system("cls");
+    system("color 0b");
+    double s;
+    cout<<"enter side len :";
+    cin>>s;
+    cout<<endl<<"anser is "<<s*4<<"cm"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void rectp(){
+    system("cls");
+    system("color 0b");
+    double w;
+    double h;
+    
+    cout<<"enter width len :";
+    cin>>w;
+    cout<<"enter height len :";
+    cin>>h;
+    cout<<endl<<"anser is "<<2*(w+h)<<"cm"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void trip(){
+    system("cls");
+    system("color 0b");
+    double a;
+    double b;
+    double c;
+    
+    cout<<"enter a :";
+    cin>>a;
+    cout<<"enter b :";
+    cin>>b;
+    cout<<"enter c :";
+    cin>>c;
+    cout<<endl<<"anser is "<<a+b+c<<"cm"<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+void p2d(){
+    system("cls");
+    system("color 0b");
+    int a;
+    do
+    {
+        cout<<"0) Calc Circle Perimeter \n1) Calc Square \n2) Calc Rectangle \n3) Calc Tirangle\n\n";
+        cin>>a;
+       
+    } while (a<0 || a>3);
+    switch (a)
+    {
+    case 0:
+        circp();
+        break;
+    case 1:
+        srqp();break;
+    case 2:
+        rectp();break;
+    case 3:
+        trip();break;
+    
+    default:
+        break;
+    }
+
+
+}
+
+
+void spherep(){
+    system("cls");
+    system("color 0b");
+    double r;
+    cout<<"enter radius :";
+    cin>>r;
+    cout<<endl<<"anser is "<<4.0*pi*(r*r)<<"cm^2"<<endl;
+    system("pause");
+    show_main_menu();
+}
+void cubep(){
+    system("cls");
+    system("color 0b");
+    double s;
+    cout<<"enter side len :";
+    cin>>s;
+    cout<<endl<<"anser is "<<6*(s*s)<<"cm^2"<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+
+
+void p3d(){
+    system("cls");
+    system("color 0b");
+    int a;
+    do
+    {
+        cout<<"0) Calc Sphere Area \n1) Calc Cube Area  \n\n";
+        cin>>a;
+       
+    } while (a<0 || a>1);
+    switch (a)
+    {
+    case 0:
+        spherep();
+        break;
+    case 1:
+        cubep();break;
+
+
+    
+    default:
+        break;
+    }
+
+
+}
+
+
+
+void arthitical_opration(){
+    system("cls");
+    system("color 0c");
+    double n1;
+    double n2;
+    char opr;
+    cout<<"enter num1 : ";
+    cin>>n1;
+    cout<<"\nchosse opration (+,-,*,/): ";
+    cin>>opr;
+    cout<<"enter num2 : ";
+    cin>>n2;
+    cout<<endl;
+    if(opr == '+'){cout<<"the anser is "<<n1+n2<<endl;}
+    else if(opr == '-'){cout<<"the anser is "<<n1-n2<<endl;}
+    else if(opr == '*'){cout<<"the anser is "<<n1*n2<<endl;}
+    else if(opr == '/'){if(n2 != 0){cout<<"the anser is "<<n1/n2<<endl;}else{cout<<"you cant dived by zero";}}
+    else{cout<<"syntax eroor";}
+    system("pause");
+    show_main_menu();
+
+}
+
+
+
+
+
+//liner function
+void liner_function(){
+    system("cls");
+    system("color 0c");
+    double a;
+    double b;
+    double s;
+    double e;
+    cout<<"enter at this secuencys ax+b";
+    cout<<endl<<"a: ";
+    cin>>a;
+    cout<<endl<<"b: ";
+    cin>>b;
+    system("cls");
+    system("color 0b");
+    cout<<"good now enter the start,end in this expmple (0,3) "<<endl;
+    cout<<"start: ";
+    cin>>s;
+    cout<<"end: ";
+    cin>>e;
+    //show table
+    for(s;s<=e;s++){
+        cout<<"[x= "<<s<<"] [f(x)="<<(a*(s)+(b))<<" ]"<<endl<<endl<<endl;
+
+    }
+    system("pause");
+    show_main_menu();
+
+
+
+}
+
+
+
+
+
+void quadiratical_function(){
+    system("cls");
+    system("color 0c");
+    double a;
+    double b;
+    double c;
+    double s;
+    double e;
+    cout<<"enter at this secuencys ax^2+bx+c";
+    cout<<endl<<"a: ";
+    cin>>a;
+    cout<<endl<<"b: ";
+    cin>>b;
+    cout<<endl<<"c: ";
+    cin>>c;
+    system("cls");
+    system("color 0b");
+    cout<<"good now enter the start,end in this expmple [start,end] "<<endl;
+    cout<<"start: ";
+    cin>>s;
+    cout<<"end: ";
+    cin>>e;
+    //show table
+    for(s;s<=e;s++){
+        cout<<"[x= "<<s<<"] [f(x)="<<((a*(s*s))+(b*s)+(c))<<" ]"<<endl<<endl<<endl;
+
+    }
+    //show added properitys
+    cout<<"=================================="<<endl;
+    cout<<"veritex of curve is : ("<<(-b/2*a)<<" , "<<(a*((-b/2*a)*(-b/2*a))+b*(-b/2*a)+c)<<")"<<endl;
+    if(a>0){
+        cout<<"the minimal value of the function is "<<(a*((-b/2*a)*(-b/2*a))+b*(-b/2*a)+c)<<endl;
+    }
+    else{
+        cout<<"the maximum value of the function is "<<(a*((-b/2*a)*(-b/2*a))+b*(-b/2*a)+c)<<endl;
+    }
+    cout<<"axis of symmetry of the curve is "<<((-b/2)*a)<<endl;
+
+    system("pause");
+    show_main_menu();
+
+
+}
+void quadiratical_formlia(){
+    system("cls");
+    system("color 0c");
+    double a;
+    double b;
+    double c;
+    cout<<"enter at this secuencys ax^2+bx+c";
+    cout<<endl<<"a: ";
+    cin>>a;
+    cout<<endl<<"b: ";
+    cin>>b;
+    cout<<endl<<"c: ";
+    cin>>c;
+    system("cls");
+    system("color 0b");
+    if(a ==0){
+        if(b == 0){
+            if(c== 0){
+                cout<<"this is infinit number !"<<endl;
+            }
+            else{
+                cout<<"no real selotion"<<endl;
+            }
+        }
+        else{
+            cout<<"this is a liner equation so this is the anser "<< (-c / b) << endl;
+        }
+    }
+    else{
+    double discriminant = b * b - 4 * a * c;
+    if (discriminant > 0) {
+        cout<<"Anser is ("<<((-b+sqrt((b*b)-4*(a*c)))/(2*a))<<" , "<<((-b-sqrt((b*b)-4*(a*c)))/(2*a)) << ") \n";
+    }
+    else if(discriminant == 0){
+        cout<<"the anser is "<< -b / (2 * a)<<endl;
+    }
+    else{cout<<"sorry we cant do img numbers in here"<<endl;}
+    }
+    system("pause");
+    show_main_menu();
+}
+
+
+void pythagorath_therom(){
+    system("cls");
+    system("color 0c");
+    int ch;
+    double AB,BC,AC;
+
+    do{
+        cout<<"at the simplist form of a right angle trinage ABC right angle at m(<B) chosse \n0) Get (AC)\n1) Get (BA) \n2) Get (BC)\n\n";
+        cin>>ch;
+    }while(ch<0 || ch>2);
+    system("cls");
+
+    switch (ch)
+    {
+    case 0:   
+        cout<<"enter AB : ";
+        cin>>AB;
+        cout<<"enter BC : ";
+        cin>>BC;
+        system("cls");
+        cout<<"The AC is "<<sqrt((AB*AB)+(BC*BC));
+        break;
+    case 1:
+        cout<<"enter AC : ";
+        cin>>AC;
+        cout<<"enter BC : ";
+        cin>>BC;
+        system("cls");
+        if((AC*AC)-(BC*BC) > 0){
+            cout<<"The AB is "<<sqrt((AC*AC)-(BC*BC));}
+        else{
+            cout<<"sorry you cant just but complex number out off no were!";
+        }
+        break;
+    case 2:
+        cout<<"enter AC : ";
+        cin>>AC;
+        cout<<"enter AB : ";
+        cin>>AB;
+        system("cls");
+        if((AC*AC)-(AB*AB) > 0){
+            cout<<"The BC is "<<sqrt((AC*AC)-(AB*AB));}
+        else{
+            cout<<"sorry you cant just but complex number out off no were!";
+        }
+        break;
+    
+    default:
+        break;
+    }
+    cout<<endl<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+void equlid_therom(){
+    system("cls");
+    system("color 0c");
+    int ch;
+    double AB,BC,AC,AD,DC,DB;
+
+    do{
+        cout<<"at the simplist form of a right angle trinage ABC right angle at m(<B) chosse \n0) Get (AB)\n1) Get (BC) \n2) Get (BD)\n\n";
+        cin>>ch;
+    }while(ch<0 || ch>2);
+    system("cls");
+
+    switch (ch)
+    {
+    case 0:   
+        cout<<"enter AD : ";
+        cin>>AD;
+        cout<<"enter AC : ";
+        cin>>AC;
+        system("cls");
+        cout<<"The AB is "<<sqrt(AD*AC);
+        break;
+    case 1:
+        cout<<"enter DC : ";
+        cin>>DC;
+        cout<<"enter AC : ";
+        cin>>AC;
+        system("cls");
+
+        cout<<"The BC is "<<sqrt(DC*AC);
+
+        break;
+    case 2:
+        cout<<"enter AD : ";
+        cin>>AD;
+        cout<<"enter DC : ";
+        cin>>DC;
+        system("cls");
+        cout<<"The BD is "<<sqrt(AD*DC);
+        break;
+    
+    default:
+        break;
+    }
+        cout<<endl<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+void trigometer_by_side(){
+    double hy,op,aj;
+    system("cls");
+    system("color 0c");
+    int a;
+    do
+    {
+        cout<<"0) sin \n1) cos \n2) tan \n3) csc \n4) sec \n5) cot \n\n";
+        cin>>a;
+       
+    } while (a<0 || a>5);
+
+
+    
+    switch (a)
+    {
+    case 0:
+        system("cls");
+        cout<<"enter the hypotinos: ";
+        cin>>hy;
+        cout<<"\nenter the oposite: ";
+        cin>>op;
+        cout<<"\n\n Anser is ("<<op<<"/"<<hy<<") or "<<op/hy;
+        break;
+    case 1:
+        system("cls");
+        cout<<"enter the hypotinos: ";
+        cin>>hy;
+        cout<<"\nenter the ajecent: ";
+        cin>>aj;
+        cout<<"\n\n Anser is ("<<aj<<"/"<<hy<<") or "<<aj/hy;
+        break;
+    case 2:
+        system("cls");
+        cout<<"enter the adjecent: ";
+        cin>>aj;
+        cout<<"\nenter the oposite: ";
+        cin>>op;
+        cout<<"\n\n Anser is ("<<op<<"/"<<aj<<") or "<<op/aj;
+        break;
+    case 3:
+        system("cls");
+        cout<<"enter the hypotinos: ";
+        cin>>hy;
+        cout<<"\nenter the oposite: ";
+        cin>>op;
+        cout<<"\n\n Anser is ("<<hy<<"/"<<op<<") or "<<hy/op;
+        break;
+    case 4:
+        system("cls");
+        cout<<"enter the hypotinos: ";
+        cin>>hy;
+        cout<<"\nenter the adjecent: ";
+        cin>>aj;
+        cout<<"\n\n Anser is ("<<hy<<"/"<<aj<<") or "<<hy/aj;
+        break;
+    case 5:
+        system("cls");
+        cout<<"enter the adjecent: ";
+        cin>>aj;
+        cout<<"\nenter the oposite: ";
+        cin>>op;
+        cout<<"\n\n Anser is ("<<aj<<"/"<<op<<") or "<<aj/op;
+        break;
+    
+    default:
+        break;
+    }
+    cout<<endl<<endl;
+    system("pause");
+    show_main_menu();
+}
+
+void trigometer_by_angle(){
+    double angle, deg;
+
+    system("cls");
+    system("color 0c");
+    int a;
+    do {
+        cout<<"0) sin \n1) cos \n2) tan \n3) csc \n4) sec \n5) cot \n\n";
+        cin>>a;
+    } while (a<0 || a>5);
+
+    system("cls");
+    cout<<"Enter the angle in degrees: ";
+    cin>>deg;
+    angle = deg * M_PI / 180.0;
+
+    switch (a)
+    {
+    case 0:
+        cout<<"\n\n Answer is sin("<<deg<<") = "<<sin(angle)<<endl;
+        break;
+    case 1:
+        cout<<"\n\n Answer is cos("<<deg<<") = "<<cos(angle)<<endl;
+        break;   
+    case 2:
+        if (fmod(deg,180) != 90){
+            cout<<"\n\n Answer is tan("<<deg<<") = "<<tan(angle)<<endl;
+        } else {
+            cout<<"Undefined! tan("<<deg<<")"<<endl;
+        }
+        break;
+    case 3:
+        if (sin(angle) != 0){
+            cout<<"\n\n Answer is csc("<<deg<<") = "<<1/sin(angle)<<endl;
+        } else {
+            cout<<"Undefined! csc("<<deg<<")"<<endl;
+        }
+        break;   
+    case 4:
+        if (cos(angle) != 0){
+            cout<<"\n\n Answer is sec("<<deg<<") = "<<1/cos(angle)<<endl;
+        } else {
+            cout<<"Undefined! sec("<<deg<<")"<<endl;
+        }
+        break;
+    case 5:
+        if (tan(angle) != 0){
+            cout<<"\n\n Answer is cot("<<deg<<") = "<<1/tan(angle)<<endl;
+        } else {
+            cout<<"Undefined! cot("<<deg<<")"<<endl;
+        }
+        break;      
+    }
+    cout<<endl;
+    system("pause");
+    show_main_menu();
+}
+

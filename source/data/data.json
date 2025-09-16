@@ -1,0 +1,9 @@
+{"Main-Menu":{"0":"algebra();","1":"gey();","2":"trig();","3":"comming_soon();"},
+"Algebra":{"0":"arth-opr();","1":"quad-t();","2":"lin-t();","3":"quad-f();","4":"quad();","5":"lin();"},
+"Gey":"Am tired bro!",
+"info":"bro we dont store data or work with gui so stop searching in our files its just 75kb c++ exe file nothing more we made this just to look fancy"
+
+
+
+
+}
